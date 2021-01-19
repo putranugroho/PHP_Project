@@ -23,8 +23,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-defined('BASE_URL') or define('BASE_URL', (is_https() ? 'https://' : 'http://') . $_SERVER['HTTP_HOST'] . dirname($_SERVER['SCRIPT_NAME']) . '/');
-$config['base_url'] = BASE_URL;
+$config['base_url'] = 'https://project-pnn.herokuapp.com/codeigniter/';
 
 /*
 |--------------------------------------------------------------------------
