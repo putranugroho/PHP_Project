@@ -2,7 +2,6 @@
 
 class Template
 {
-
     var $template_data = array();
 
     function set($name, $value)
