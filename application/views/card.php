@@ -2,12 +2,12 @@
 <section class="content-header">
     <h1>
         Transaction
-        <small>by RRN</small>
+        <small>by Card</small>
     </h1>
     <ol class="breadcrumb">
         <li><a href="<?= site_url('home') ?>"><i class="fa fa-dashboard"></i> Home</a></li>
         <li>Transaction</li>
-        <li class="active">RRN</li>
+        <li class="active">Card</li>
     </ol>
 </section>
 
@@ -17,8 +17,8 @@
         <div class="col-xs-12">
             <div class="box">
                 <div class="box-header">
-                    <h3 class="box-title" style="margin-bottom: 10px;">RRN Transaction Detail</h3>
-                    <form action="<?php echo base_url() . 'rrn/search_rrn'; ?>" method="post">
+                    <h3 class="box-title" style="margin-bottom: 10px;">Card Transaction Detail</h3>
+                    <form action="<?php echo base_url() . 'card/search_card'; ?>" method="post">
                         <div class="row">
                             <div class="col-xs-6">
                                 <div class="form-group">
@@ -26,8 +26,8 @@
                                     <input type="date" name="trans_date" class="form-control" value="">
                                 </div>
                                 <div class="form-group">
-                                    <label>Retrieval Ref Number</label>
-                                    <input type="text" name="rrn" class="form-control" value="">
+                                    <label>Card Number</label>
+                                    <input type="text" name="card" class="form-control" value="">
                                 </div>
                             </div>
                             <!-- /.col -->

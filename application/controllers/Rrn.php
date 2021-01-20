@@ -36,7 +36,6 @@ class Rrn extends CI_Controller
             'checkbox'      => $checkbox
         );
 
-        $this->load->model('iso_rpt');
         $data['payload'] = $this->iso_rpt->get_rrn($data)->result();
         $this->template->load('template', 'rrn_result', $data);
     }

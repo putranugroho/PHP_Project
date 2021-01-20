@@ -27,4 +27,13 @@ class Iso_rpt extends CI_Model
             return $payload;
         }
     }
+
+    public function show_card_rrn($data)
+    {
+        $this->db->from('iso_rpt');
+        $this->db->where('mti', '0200');
+        $this->db->where('bit2', $data);
+        $payload = $this->db->get();
+        return $payload;
+    }
 }
