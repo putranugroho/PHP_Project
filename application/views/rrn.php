@@ -1,13 +1,13 @@
 <!-- Content Header (Page header) -->
 <section class="content-header">
     <h1>
-        Data Tables
-        <small>advanced tables</small>
+        Transaction
+        <small>by RRN</small>
     </h1>
     <ol class="breadcrumb">
         <li><a href="<?= site_url('home') ?>"><i class="fa fa-dashboard"></i> Home</a></li>
-        <li><a href="#">Tables</a></li>
-        <li class="active">Data tables</li>
+        <li><a href="#">Transaction</a></li>
+        <li class="active">RRN</li>
     </ol>
 </section>
 
@@ -17,11 +17,7 @@
         <div class="col-xs-12">
             <div class="box">
                 <div class="box-header">
-                    <h3 class="box-title">Hover Data Table</h3>
-                </div>
-                <!-- /.box-header -->
-                <div class="box-body">
-                    <section style="padding : 0px 10px;">
+                    <section>
                         <form action="<?php echo base_url() . 'rrn/search_rrn'; ?>" method="post">
                             <div class="row">
                                 <div class="col-xs-3">
@@ -42,16 +38,14 @@
                                     <div class="form-group">
                                         <label>MSG TYPE : </label>
                                         <div class="checkbox icheck">
-                                            <label>
-                                                <input type="checkbox" value="normal" name="check[]"> Normal
-                                                <input type="checkbox" value="reversal" name="check[]"> Reversel
-                                            </label>
+                                            <input type="checkbox" value="normal" name="check[]"> Normal
+                                            <input type="checkbox" value="reversal" name="check[]"> Reversal
                                         </div>
                                     </div>
                                 </div>
                                 <!-- /.col -->
 
-                                <div class="col-xs-2" style="margin-top: 24px; text-align: end;">
+                                <div class="col-xs-2" style="margin-top: 24px; padding-left: 0px; text-align: end;">
                                     <button type="submit" class="btn btn-primary">Simpan</button>
                                 </div>
                                 <!-- /.col -->
@@ -59,7 +53,7 @@
                         </form>
                     </section>
                 </div>
-                <!-- /.box-body -->
+                <!-- /.box-header -->
             </div>
             <!-- /.box -->
         </div>
