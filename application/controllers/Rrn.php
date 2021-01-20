@@ -23,16 +23,6 @@ class Rrn extends CI_Controller
 
         $this->load->model('iso_rpt');
         $data['payload'] = $this->iso_rpt->get_rrn($data)->result();
-        $this->template->load('template', 'rrn', $data);
-        // foreach ($data['payload'] as $row) {
-        //     echo $row['id'];
-        //     echo ",";
-        //     echo $row['mti'];
-        //     echo ",";
-        //     echo $row['bit2'];
-        //     echo ",";
-        //     echo $row['bit37'];
-        //     echo "|";
-        // }
+        $this->template->load('template', 'rrn_result', $data);
     }
 }
