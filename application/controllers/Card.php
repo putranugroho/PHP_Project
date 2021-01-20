@@ -13,12 +13,31 @@ class Card extends CI_Controller
         $trans_date = $this->input->post('trans_date');
         $card       = $this->input->post('card');
         $value      = $this->input->post('check');
+
+        if ($trans_date == "") {
+            echo "<script>
+            alert('Pilih Transaction Date')
+            window.location='" . site_url('card') . "'
+            </script>";
+        } elseif ($value == "") {
+            echo "<script>
+            alert('Pilih Message Type')
+            window.location='" . site_url('card') . "'
+            </script>";
+        } elseif ($card == "") {
+            echo "<script>
+            alert('Silahkan isi Card Number dahulu')
+            window.location='" . site_url('card') . "'
+            </script>";
+        }
         $checkbox   = implode(",", $value);
+
         $select_rrn = array(
             'trans_date'    => $trans_date,
             'card'          => $card,
             'checkbox'      => $checkbox
         );
+
         $this->session->set_flashdata($select_rrn);
         $data['payload'] = $this->iso_rpt->show_card_rrn($card)->result();
         $this->template->load('template', 'card_pilih', $data);
