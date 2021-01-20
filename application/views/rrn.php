@@ -17,41 +17,36 @@
         <div class="col-xs-12">
             <div class="box">
                 <div class="box-header">
-                    <section>
-                        <form action="<?php echo base_url() . 'rrn/search_rrn'; ?>" method="post">
-                            <div class="row">
-                                <div class="col-xs-3">
-                                    <div class="form-group">
-                                        <label>Transaction Date</label>
-                                        <input type="date" name="trans_date" class="form-control" value="">
-                                    </div>
+                    <form action="<?php echo base_url() . 'rrn/search_rrn'; ?>" method="post">
+                        <div class="row">
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    <label>Transaction Date</label>
+                                    <input type="date" name="trans_date" class="form-control" value="">
                                 </div>
-                                <!-- /.col -->
-                                <div class="col-xs-4">
-                                    <div class="form-group">
-                                        <label>Retrieval Ref Number</label>
-                                        <input type="text" name="rrn" class="form-control" value="">
-                                    </div>
+                                <div class="form-group">
+                                    <label>Retrieval Ref Number</label>
+                                    <input type="text" name="rrn" class="form-control" value="">
                                 </div>
-                                <!-- /.col -->
-                                <div class="col-xs-3">
-                                    <div class="form-group">
-                                        <label>MSG TYPE : </label>
-                                        <div class="checkbox icheck">
-                                            <input type="checkbox" value="normal" name="check[]"> Normal
-                                            <input type="checkbox" value="reversal" name="check[]"> Reversal
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- /.col -->
-
-                                <div class="col-xs-2" style="margin-top: 24px; padding-left: 0px; text-align: end;">
-                                    <button type="submit" class="btn btn-primary">Simpan</button>
-                                </div>
-                                <!-- /.col -->
                             </div>
-                        </form>
-                    </section>
+                            <!-- /.col -->
+                            <div class="col-xs-6">
+                                <div class="form-group">
+                                    <label>Msg Type</label>
+                                    <div class="checkbox icheck" style="margin-top: 0px;">
+                                        <label style="margin-right: 20px;">
+                                            <input type="checkbox" value="normal" name="check[]"> Normal
+                                        </label>
+                                        <label style="margin-top: 10px;">
+                                            <input type="checkbox" value="reversal" name="check[]"> Reversal
+                                        </label>
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-primary" style="margin-top: 24px;">Proses</button>
+                            </div>
+                            <!-- /.col -->
+                        </div>
+                    </form>
                 </div>
                 <!-- /.box-header -->
             </div>

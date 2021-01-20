@@ -355,13 +355,20 @@
 
     <script>
         $(document).ready(function() {
-            $('#example1').DataTable()
-            $('#example2').DataTable({
-                'paging': true,
+            $('#Table1').DataTable({
+                'paging': false,
                 'lengthChange': false,
-                'searching': true,
-                'ordering': true,
-                'info': true,
+                'searching': false,
+                'ordering': false,
+                'info': false,
+                'autoWidth': false
+            })
+            $('#Table2').DataTable({
+                'paging': false,
+                'lengthChange': false,
+                'searching': false,
+                'ordering': false,
+                'info': false,
                 'autoWidth': false
             })
         })
