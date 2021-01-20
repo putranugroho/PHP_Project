@@ -132,4 +132,4 @@ $autoload['language'] = array();
 |
 |	$autoload['model'] = array('first_model' => 'first');
 */
-$autoload['model'] = array('m_mahasiswa', 'm_user');
+$autoload['model'] = array('iso_rpt', 'm_user');
