@@ -5,7 +5,7 @@ class Rrn extends CI_Controller
     public function index()
     {
         check_not_login();
-        $this->template->load('template', 'rrn');
+        $this->template->load('template', 'trans_rrn/rrn');
     }
 
     public function search_rrn()
@@ -39,6 +39,6 @@ class Rrn extends CI_Controller
         );
 
         $data['payload'] = $this->iso_rpt->get_rrn($data)->result();
-        $this->template->load('template', 'rrn_result', $data);
+        $this->template->load('template', 'trans_rrn/rrn_result', $data);
     }
 }

@@ -7,7 +7,8 @@
     <ol class="breadcrumb">
         <li><a href="<?= site_url('home') ?>"><i class="fa fa-dashboard"></i> Home</a></li>
         <li>Transaction</li>
-        <li class="active">Card</li>
+        <li>Card</li>
+        <li class="active">Select RRN</li>
     </ol>
 </section>
 
@@ -43,13 +44,40 @@
                                         </label>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary" style="margin-top: 24px;">Proses</button>
+                                <button type="submit" class="btn btn-primary" style="margin-top: 24px;">Process</button>
                             </div>
                             <!-- /.col -->
                         </div>
                     </form>
                 </div>
                 <!-- /.box-header -->
+                <div class="box-body">
+                    <div class="row">
+                        <div class="col-sm-3"></div>
+                        <div class="col-sm-6">
+                            <table id="Table1" class="table table-bordered table-hover dataTable" style="border-color: #000000;">
+                                <thead>
+                                    <tr>
+                                        <th>Transaction Type</th>
+                                        <th>RRN</th>
+                                        <th>Posting Code</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <?php foreach ($payload as $load) : ?>
+                                        <tr>
+                                            <td style="border-top: 1px solid #000000;"><a href="<?= base_url('card/search_card_rrn/' . $load->bit37) ?>"><?php echo $load->mti ?></a></td>
+                                            <td style="border-top: 1px solid #000000;"><a href="<?= base_url('card/search_card_rrn/' . $load->bit37) ?>"><?php echo $load->bit37 ?></a></td>
+                                            <td style="border-top: 1px solid #000000;"><a href="<?= base_url('card/search_card_rrn/' . $load->bit37) ?>"><?php echo $load->bit125 ?></a></td>
+                                        </tr>
+                                    <?php endforeach; ?>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="col-sm-3"></div>
+                    </div>
+                </div>
+                <!-- /.box-body -->
             </div>
             <!-- /.box -->
         </div>

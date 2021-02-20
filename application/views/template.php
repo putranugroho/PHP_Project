@@ -62,7 +62,7 @@
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                 <img src="<?php echo base_url() ?>assets/dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
-                                <span class="hidden-xs"><?= $this->fungsi->user_login()->username ?></span>
+                                <span class="hidden-xs"><?= $this->fungsi->user_login()->userid ?></span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- User image -->
@@ -70,7 +70,7 @@
                                     <img src="<?php echo base_url() ?>assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                                     <p>
-                                        <?= $this->fungsi->user_login()->name ?>
+                                        <?= $this->fungsi->user_login()->userid ?>
                                     </p>
                                 </li>
                                 <!-- Menu Footer-->
@@ -102,7 +102,7 @@
                         <img src="<?php echo base_url() ?>assets/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                     </div>
                     <div class="pull-left info">
-                        <p><?= $this->fungsi->user_login()->name ?></p>
+                        <p><?= $this->fungsi->user_login()->userid ?></p>
                         <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                     </div>
                 </div>
@@ -120,6 +120,7 @@
                         <ul class="treeview-menu">
                             <li><a href="<?= site_url('rrn') ?>"><i class="fa fa-circle-o"></i> Transaction by RRN</a></li>
                             <li><a href="<?= site_url('card') ?>"><i class="fa fa-circle-o"></i> Transaction by Card</a></li>
+                            <li><a href="<?= site_url('prefix') ?>"><i class="fa fa-circle-o"></i> Bank Member / Prefix</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -372,6 +373,27 @@
                 'autoWidth': false
             })
         })
+    </script>
+
+    <script type="text/javascript">
+        function prefixDropdown(text) {
+            $('#prefix-dropdown').text(text);
+            $('#prefix-input').attr('disabled', false);
+            $('#prefix-button').attr('disabled', false);
+            if (text == "Bank Id") {
+                $('#prefix-button').val("bank-id")
+                $('#prefix-input').attr('placeholder', 'Input Bank ID');
+                $('#prefix-input').attr('name', 'bank-id');
+            } else if (text == "Bank Name") {
+                $('#prefix-button').val("bank-name")
+                $('#prefix-input').attr('placeholder', 'Input Bank Name');
+                $('#prefix-input').attr('name', 'bank-name');
+            } else {
+                $('#prefix-button').val("prefix")
+                $('#prefix-input').attr('placeholder', 'Input Prefix / BIN');
+                $('#prefix-input').attr('name', 'prefix');
+            }
+        }
     </script>
 
     <!-- iCheck -->

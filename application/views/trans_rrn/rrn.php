@@ -43,7 +43,7 @@
                                         </label>
                                     </div>
                                 </div>
-                                <button type="submit" class="btn btn-primary" style="margin-top: 24px;">Proses</button>
+                                <button type="submit" class="btn btn-primary" style="margin-top: 24px;">Process</button>
                             </div>
                             <!-- /.col -->
                         </div>

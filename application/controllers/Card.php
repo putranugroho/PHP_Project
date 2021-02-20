@@ -5,7 +5,7 @@ class Card extends CI_Controller
     public function index()
     {
         check_not_login();
-        $this->template->load('template', 'card');
+        $this->template->load('template', 'trans_card/card');
     }
 
     public function search_card()
@@ -39,8 +39,8 @@ class Card extends CI_Controller
         );
 
         $this->session->set_flashdata($select_rrn);
-        $data['payload'] = $this->iso_rpt->show_card_rrn($card)->result();
-        $this->template->load('template', 'card_pilih', $data);
+        $data['payload'] = $this->iso_rpt->show_card_rrn($select_rrn)->result();
+        $this->template->load('template', 'trans_card/card_pilih', $data);
     }
 
     public function search_card_rrn($rrn)
@@ -56,7 +56,7 @@ class Card extends CI_Controller
 
         $data['payload'] = $this->iso_rpt->get_rrn($data)->result();
         if (count($data['payload']) > 0) {
-            $this->template->load('template', 'card_result', $data);
+            $this->template->load('template', 'trans_card/card_result', $data);
         } else {
             echo "<script>
             alert('Data transaksi tidak tersedia')
